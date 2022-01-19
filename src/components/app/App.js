@@ -3,7 +3,9 @@ import UserProfile from "../userProfile/UserProfile";
 const App = () => {
 	return (
 		<div className="app">
-			<UserProfile/>
+			<div className="container">
+				<UserProfile/>
+			</div>
 		</div>
 	);
 }

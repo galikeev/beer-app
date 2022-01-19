@@ -44,11 +44,31 @@ const UserProfile = () => {
     }
 
     const renderItems = (obj) => {
+        const mail = `mailto:${obj.email}`;
+        const phone = `tel:${obj.phone}`;
         return (
-            <>
-                <div>{obj.first_name}</div>
-                <div>{obj.last_name}</div>
-            </>
+            <div className="user__wrapper">
+                <div className="user__profile">
+                    <div className="user__img">
+                        <img src={obj.img} alt={obj.username} />
+                    </div>
+                    <div className="user__main">
+                        <h3 className="user__nick">@{obj.username}</h3>
+                        <h2 className="user__name">{obj.name} {obj.surname}</h2>
+                        <div>{obj.titileJob}, {obj.skillJob}</div>
+                    </div>
+                </div>
+                <div className="user__descr">
+                    <div className="user__from">{obj.country}, {obj.state}, <br/> {obj.city}, <br/> {obj.streetName}, {obj.address}</div>
+                    <div className="user__phone">
+                        <a href={phone}>{obj.phone}</a>
+                    </div>
+                    <div className="user__mail">
+                    <a href={mail}>{obj.email}</a>
+                    </div>
+                    <button className="user__button" onClick={updateUser}>Change user</button>
+                </div>
+            </div>
         )
     }
 
@@ -58,9 +78,9 @@ const UserProfile = () => {
     }, [process])
 
     return (
-        <>
+        <div className="user">
             {elements}
-        </>
+        </div>
     )
 }
 
