@@ -7,7 +7,7 @@ const useBeerService = () => {
 
     const getUser = async () => {
         const res = await request(`${_apiBase}users/random_user`);
-        return res;
+        return _transformUser(res);
     }
 
     const getBeer = async () => {
@@ -15,6 +15,27 @@ const useBeerService = () => {
         return res;
     }
 
+    const _transformUser = (user) => {
+        return {
+            id: user.id,
+            uid: user.uid,
+            name: user.first_name,
+            surname: user.last_name,
+            username: user.username,
+            email: user.email,
+            img: user.avatar,
+            gender: user.gender,
+            phone: user.phone_number.substr(0, user.phone_number.length - 6),
+            birthday: user.date_of_birth,
+            titileJob: user.employment.title,
+            skillJob: user.employment.key_skill,
+            city: user.address.city,
+            streetName: user.address.street_name,
+            address: user.address.street_address,
+            state: user.address.state,
+            country: user.address.country
+        }
+    }
 
     return {
         clearError,
