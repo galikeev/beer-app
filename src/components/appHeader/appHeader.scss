@@ -1,0 +1,16 @@
+.header {
+    width: 100%;
+    padding: 30px 70px;
+    display: flex;
+    justify-content: space-between;
+    background-color: #e9a14f;
+    &__title {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 37px;
+        &:hover {
+            color: #fff;
+            transition: 0.3s all;
+        }
+    }
+}
