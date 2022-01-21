@@ -1,0 +1,39 @@
+@media (max-width: 991px) {
+    .container {
+        width: 720px;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        width: 540px;
+        padding: 10px 0 10px 0;
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        width: 100%;
+        padding: 10px 0 10px 0;
+    }
+    .header {
+        text-align: center;
+    }
+    .user {
+        &__profile {
+            flex-direction: column;
+            text-align: center;
+        }
+        &__descr {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+    }
+    .beer {
+        &__wrapper {
+            justify-content: center;
+            text-align: center;
+        }
+    }
+}
