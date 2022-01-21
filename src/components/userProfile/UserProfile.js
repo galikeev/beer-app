@@ -30,7 +30,7 @@ const UserProfile = () => {
         const mail = `mailto:${obj.email}`;
         const phone = `tel:${obj.phone}`;
         return (
-            <div className="user__wrapper">
+            <div key={obj.id} className="user__wrapper">
                 <div className="user__profile">
                     <div className="user__img">
                         <img src={obj.img} alt={obj.username} />

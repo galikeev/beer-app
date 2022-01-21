@@ -46,14 +46,14 @@ input::-webkit-inner-spin-button {
 }
 
 .app {
-    height: 100vh;
+    min-height: 100vh;
     background-color: #1b3147;
 }
 
 .container {
     width: 960px;
     margin: 0 auto;
-    padding: 50px 0 50px 0;
+    padding: 30px 0 30px 0;
 }
 
 @media (max-width: 991px) {
