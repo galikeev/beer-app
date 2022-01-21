@@ -57,6 +57,10 @@ const UserProfile = () => {
                         <h2 className="user__name">{obj.name} {obj.surname}</h2>
                         <div>{obj.titileJob}, {obj.skillJob}</div>
                     </div>
+                    <div className="user__main">
+                        <div>Gender: {obj.gender}</div>
+                        <div>Date birthday: {obj.birthday }</div>
+                    </div>
                 </div>
                 <div className="user__descr">
                     <div className="user__from">{obj.country}, {obj.state}, <br/> {obj.city}, <br/> {obj.streetName}, {obj.address}</div>
